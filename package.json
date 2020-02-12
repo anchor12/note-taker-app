@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "start": "public/server.js",
+  
   "scripts": {
+    "start": "public/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
+
   "author": "",
   "license": "ISC",
   "dependencies": {
