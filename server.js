@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 
 
-var db = require('../db/db.json');
+var db = require('./db/db.json');
 
 
 app.get("/", function (req, res) {
@@ -44,7 +44,7 @@ app.delete("/api/notes/:id", function(req,res) {
   
   db.splice(req.params.id, 1);
   
-  fs.writeFile("../db/db.json", JSON.stringify(db), function (err) {
+  fs.writeFile("./db/db.json", JSON.stringify(db), function (err) {
 
     if (err) {
       return console.log(err);
@@ -67,7 +67,7 @@ app.post("/api/notes", function (req, res) {
 
   res.json(newTable);
   db.push(newTable);
-  fs.writeFile("../db/db.json", JSON.stringify(db), function (err) {
+  fs.writeFile("./db/db.json", JSON.stringify(db), function (err) {
 
     if (err) {
       return console.log(err);
